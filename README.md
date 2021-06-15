@@ -14,5 +14,19 @@ The tensorflow implement of [Eye In-Painting with Exemplar Generative Adversaria
 
 ## Usage
 we change the dataset processing way,
-first: download face image dataset,celeba or ffhq or vggface 
-second: crop face into 256*256 ,by 
+- first: download face image dataset,celeba or ffhq or vggface 
+- second: unzip dataset into data dir,and crop face into 256*256 ,by 
+```bash
+python preprocess.py --root ./data/raw --output_dir ./data/crop
+```
+- train:
+change path pram to ./data/crop
+run:
+```bash
+python main.py --OPER_FLAG=0
+```
+-test:
+```bash
+python main.py --OPER_FLAG=1 --img_path ./data/celeb_id_aligned/emilio-rivera-3.jpg --ex_path ./data/celeb_id_aligned/emilio-rivera-4.jpg
+```
+
