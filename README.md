@@ -14,7 +14,7 @@ The tensorflow implement of [Eye In-Painting with Exemplar Generative Adversaria
 
 ## Usage
 we change the dataset processing way,
-- first: download face image dataset,celeba or ffhq or vggface ;download shape_predictor_68_face_landmarks.dat from web,and put under root dir
+- first: download face image dataset,celeba or ffhq or vggface ;download[shape_predictor_68_face_landmarks.dat](https://github.com/davisking/dlib-models) ,and put under root dir
 - second: unzip dataset into data dir,and crop face into 256*256 ,by 
 ```bash
 python preprocess.py --root ./data/raw --output_dir ./data/crop
